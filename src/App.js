@@ -1,17 +1,16 @@
 import React from "react";
+import { Body1 } from "./css/Pages_css.js";
+import SideNav from "./nav/sidenav";
 
-import SideNav from "./components/sidenav";
-import TopNav from "./components/topnav";
 import MyProvider from "./Context";
 
 function App() {
   return (
-    <div className="App">
+    <Body1>
       <MyProvider>
-        <TopNav />
         <SideNav />
       </MyProvider>
-    </div>
+    </Body1>
   );
 }
 
