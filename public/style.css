@@ -1,0 +1,5 @@
+pre {
+  background-color: lightgray;
+  word-wrap: "break-word";
+  white-space: "pre-line";
+}

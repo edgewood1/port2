@@ -36,8 +36,8 @@ function Apps() {
       <Space />
       <BoldText> EDUCATION: </BoldText>
 
-      {ed.map(e => (
-        <div>
+      {ed.map((e, i) => (
+        <div key={i}>
           <Text>
             {e.pgm}, {e.time}, {e.school}
           </Text>
@@ -47,13 +47,13 @@ function Apps() {
       ))}
       <hr />
       <BoldText>WORK: </BoldText>
-      {work.map(e => (
-        <div>
+      {work.map((e, i) => (
+        <div key={i}>
           <Text>
             {e.pgm} -- {e.where}, {e.when}
           </Text>
-          {e.desc.map(f => (
-            <SubText>
+          {e.desc.map((f,index) => (
+            <SubText key={index}>
               <li>{f}</li>
             </SubText>
           ))}
@@ -63,8 +63,8 @@ function Apps() {
       <hr />
       <BoldText> VOLUNTEER:</BoldText>
       <Space />
-      {volunteer.map(e => (
-        <div>
+      {volunteer.map((e, i) => (
+        <div key={i}>
           <Text>
             {e.pgm}: {e.where}, {e.when}{" "}
           </Text>

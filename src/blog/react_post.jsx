@@ -1,6 +1,8 @@
 import React from "react";
 
 import axios from "axios";
+import { Text, Title,  } from "../css/Pages_css";
+
 import { Base64 } from "js-base64";
 var showdown = require("showdown");
 var converter = new showdown.Converter({ metadata: true });
@@ -30,28 +32,16 @@ class Post extends React.Component {
     });
   }
 
-  titleStyle = {
-    fontSize: "150%",
-    marginTop: "5%",
-    // marginLeft: '10%',
-    textAlign: "center",
-    fontWeight: "bold"
-  };
-  textStyle = {
-    fontSize: "130%",
-    marginLeft: "5%",
-    marginRight: "5%",
-    fontFamily: "Garamond"
-  };
+ 
 
   render() {
     var render = converter.makeHtml(this.state.content);
     // var meta = converter.getMetadata();
     return (
       <div>
-        <div style={this.titleStyle}>{this.state.title}</div>
-        <div
-          style={this.textStyle}
+        <Title style={{paddingTop: '10vh'}} >{this.state.title}</Title>
+        <Text style={{margin: '0 20vw'}}
+          
           dangerouslySetInnerHTML={this.createMarkup(render)}
         />
       </div>

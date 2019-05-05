@@ -10,11 +10,6 @@ export var Body1 = styled.div`
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 `;
 
-// pre {
-//   background-color: lightgray;
-//   word-wrap: "break-word";
-//   white-space: "pre-line";
-// }
 
 // blog , app inner
 export const ColContainer = styled.div`

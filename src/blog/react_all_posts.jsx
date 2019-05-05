@@ -2,6 +2,7 @@ import React from "react";
 
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Text, Title,   ColContainer } from "../css/Pages_css";
 
 class React_blog extends React.Component {
   state = {
@@ -9,13 +10,13 @@ class React_blog extends React.Component {
   };
 
   componentDidMount() {
-    var url = "https://api.github.com/repos/edgewood1/gatsby/contents/markdown";
-    console.log("here");
+    var url = "https://api.github.com/repos/edgewood1/portfolio/contents/markdown";
+ 
     axios.get(url).then(results => {
       results = results.data;
-      console.log(results);
+    
       var hits = results.map(element => {
-        console.log(element.name);
+      
         return element.name;
       });
       this.setState({ hits: hits }, () => {
@@ -24,40 +25,24 @@ class React_blog extends React.Component {
     });
   }
   /// end of compDidMount
-
-  titleStyle = {
-    fontSize: "150%",
-    // marginLeft: '10%',
-    textAlign: "center",
-    fontWeight: "bold"
-  };
-  textStyle = {
-    fontSize: "130%",
-    marginLeft: "5%",
-    marginRight: "5%",
-    fontWeight: 540,
-    fontFamily: "Garamond"
-  };
+ 
 
   render() {
     return (
-      <div>
-        <div className="container" style={this.titleStyle}>
-          <div className="row">
-            <p className="col offset-s3"> React Posts </p>
-          </div>
-        </div>
+          <ColContainer>
+        <Title> React Posts </Title>  
+        
         <br />
         <ul>
           {this.state.hits.map(elem => (
-            <li style={this.textStyle}>
+            <Text>
               <Link to={`/react_post/${elem}`}>
                 {elem.replace(".md", "").replace(/[0-9]+-/, "")}
               </Link>
-            </li>
+              </Text>
           ))}
         </ul>
-      </div>
+      </ColContainer>
     );
   }
 }

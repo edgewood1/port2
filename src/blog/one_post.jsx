@@ -1,6 +1,10 @@
 import React from "react";
 
 import axios from "axios";
+import { Text, Title, Grid, ColContainer, ColContainer3 } from "../css/Pages_css";
+
+
+
 
 class Post extends React.Component {
   state = {
@@ -31,39 +35,26 @@ class Post extends React.Component {
       console.log(res.data.title);
       const content = res.data.content;
 
-      this.setState({ content: content, title: res.data.title }),
+      this.setState({ content: content, title: res.data.title },
         () => {
           console.log(this.state.content);
-        };
+        });
     });
   }
 
-  titleStyle = {
-    fontSize: "150%",
-    // marginLeft: '10%',
-    textAlign: "center",
-    fontWeight: "bold"
-  };
-  textStyle = {
-    fontSize: "138%",
-    marginLeft: "25%",
-    marginRight: "25%",
-    fontWeight: 540,
-    fontFamily: "Garamond"
-  };
+   
 
   render() {
     return (
-      <div>
+      <div style={{margin: '0 10vw'}}>
         <br />
-        <div style={this.titleStyle}>{this.state.title}</div>
+        <Title style={{marginTop: '10vh'}}>{this.state.title}</Title>
         <hr />
 
-        <div
-          style={this.textStyle}
+       <Text
           dangerouslySetInnerHTML={this.createMarkup(this.state.content)}
         />
-      </div>
+        </div>
     );
   }
 }

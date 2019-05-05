@@ -21,7 +21,7 @@ function Apps() {
       <Hr />
       <Space />
       {appDetails.map((e, i) => (
-        <Container>
+        <Container key={i}>
           <Flex1>
             <BoldText> {e.title} </BoldText>
 

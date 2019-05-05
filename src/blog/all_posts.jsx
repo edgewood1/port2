@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Text, Title, Grid, ColContainer } from "../css/Pages_css";
+
 
 class Blog extends React.Component {
   state = {
@@ -36,70 +38,50 @@ class Blog extends React.Component {
     var url =
       "https://public-api.wordpress.com/rest/v1.1/sites/code757.wordpress.com/posts/?tag=" +
       newer_id;
-    console.log(url);
+    
     axios.get(url).then(res => {
       var posts = res.data.posts;
-      console.log(posts);
+      
       //   var posts = decodeURIComponent(posts)
       var hits = posts.map(element => {
-        console.log(element.tags);
+        
         if (element.tags) {
-          console.log(element.tags[id].name);
+          
           if (element.tags[id].name === id) {
-            console.log(element);
+            
             return element;
           }
         }
       });
-      console.log(hits);
+      //posts found for query
       this.setState({ hits: hits }, () => {
         console.log(this.state.hits);
       });
     });
   }
-
-  titleStyle = {
-    fontSize: "150%",
-    // marginLeft: '10%',
-    textAlign: "center",
-    fontWeight: "bold"
-  };
-  textStyle = {
-    fontSize: "130%",
-    marginLeft: "5%",
-    marginRight: "5%",
-    fontWeight: 540,
-    fontFamily: "Garamond",
-    color: "black"
-  };
+ 
 
   render() {
     if (this.state.hits.length > 0) {
-      console.log(Object.keys(this.state.hits[0]));
-      console.log(this.state.hits[0]["title"]);
-      // var title = this.state.hits[0]["title"];
+       
     }
 
-    // var keys = Object.keys(this.state.hits[0])
-    // console.log(keys)
-
+ 
     return (
-      <div>
-        <p style={this.titleStyle}> Blog Categories</p>
-        <div className="container" style={this.textStyle}>
-          <div className="row">
-            {this.state.hits.map(elem => (
+      <ColContainer>
+        <Title> Blog Categories</Title>
+   
+            {this.state.hits.map((elem, i) => (
               <Link
                 className="col s6"
-                key={elem}
+                key={i}
                 to={`/one_post/${elem["ID"]}`}
               >
                 {elem["title"].toString().replace(/[0-9 ]/, "")}
               </Link>
             ))}
-          </div>
-        </div>
-      </div>
+            </ColContainer>
+     
     );
   }
 }
