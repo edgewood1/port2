@@ -38,7 +38,7 @@ export default class sideNav extends React.Component {
       <Router>
         <Wrap1>
           {this.titles.map((e, i) => (
-            <Link key = {i} to={e[1]}>
+            <Link key = {i} to={e[1]} style={{ textDecoration: 'none' }}>
               <Text1>{e[0]}</Text1>
             </Link>
           ))}
@@ -52,7 +52,7 @@ export default class sideNav extends React.Component {
           {this.state.open ? (
             <Open>
               {this.titles.map((e, i) => (
-                <Link key={i} to={e[1]}>
+                <Link key={i} to={e[1]} style={{ textDecoration: 'none' }}>
                   <Text onClick={() => this.handle()}>{e[0]}</Text>
                 </Link>
               ))}
