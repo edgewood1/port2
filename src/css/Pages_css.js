@@ -18,7 +18,7 @@ export const ColContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 10vh;
+  
   align-items: center;
 `;
 
@@ -93,7 +93,11 @@ export const Text = styled.div`
   font-family: Garamond;
   font-size: 1.5em;
   line-height: 1.5em;
+  color: black;
+  
 `;
+export const Text2 = styled(Text)`
+  text-align: center;`
 
 export const ParaText = styled(Text)`
   text-indent: 2em;

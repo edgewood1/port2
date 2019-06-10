@@ -4,6 +4,7 @@ export var Text1 = styled.div`
   transition: 1s;
   margin-top: 0.9em;
   font-size: 1.25em;
+  padding: 0 2em;
   color: white;
   @media screen and (max-width: 650px) {
     display: none;
@@ -19,9 +20,9 @@ export var Wrap1 = styled.div`
     #94716b,
     #b79891
   );
-  transition: 1s;
+  // transition: 1s;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   position: fixed;
   top: 0px;
 }`;

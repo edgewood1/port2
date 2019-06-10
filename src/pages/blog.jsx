@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Text, Title, Grid, ColContainer } from "../css/Pages_css";
+import { Text, Text2, Title, Grid, ColContainer } from "../css/Pages_css";
 
 class Blog extends React.Component {
   state = {
@@ -59,7 +59,7 @@ class Blog extends React.Component {
               key={el}
               to={`/all_posts/${el}`}
             >
-              <Text>{el}</Text>
+              <Text2>{el}</Text2>
             </Link>
           ))}
           <Link
@@ -73,7 +73,7 @@ class Blog extends React.Component {
             key="React"
             to={`/react`}
           >
-            <Text>React</Text>
+            <Text2>React</Text2>
           </Link>
         </Grid>
       </ColContainer>
