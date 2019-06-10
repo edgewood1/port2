@@ -3,7 +3,7 @@ const appDetails = [
     title: "Good Tunes",
     tech: "Mongo | Express | React | Node | Passport",
     desc:
-      "This app gathers new song recommendations from various music sites - It also allows a user to rate and save select songs to a playlist.",
+      "This app requires the user to be logged into Spotify.  The app gathers new song recommendations from various music sites - It also allows a user to rate and save select songs to a playlist.",
     image: require("./images/goodTunes.png"),
     // link: "https://warm-depths-30010.herokuapp.com/"
     link: "http://157.230.82.251:3001/"
