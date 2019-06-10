@@ -8,8 +8,7 @@ function Info() {
       <Title> Background </Title>
 
       <ParaText>
-        In college, I studied literature and philosophy and spent many years
-        teaching college writing and research classes at various nearby
+        In college, I studied literature and philosophy before teaching writing and research classes at various nearby
         colleges.
       </ParaText>
 
@@ -19,15 +18,12 @@ function Info() {
         spend my time with my wife, daughter, and dog.
       </ParaText>
       <ParaText>
-        In terms of coding, it's easy for me to see it as an extension of the
-        various forms of writing I've explored through my life. To this end, I
-        appreciate the way web development integrates my past interests yet
+        Coding could be seen as a kind of writing, with its own syntax and rhetoric, its own recursive process, its own styles of delivery.
+        I also appreciate the way web development integrates my past interests yet
         allows for new forms of expression, collaboration, and community.
       </ParaText>
       <ParaText>
-        To this end, I appreciate the way web development integrates my past
-        interests yet allows for new forms of expression, collaboration, and
-        community.
+        I tend to focus on javaScript, revisting React and Node/Express.  I also keeping coming back to the query languages of MySQL and MongoDB.
       </ParaText>
     </ColContainer2>
   );
