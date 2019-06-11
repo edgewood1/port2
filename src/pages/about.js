@@ -23,7 +23,7 @@ function Info() {
         allows for new forms of expression, collaboration, and community.
       </ParaText>
       <ParaText>
-        I tend to focus on javaScript, revisting React and Node/Express.  I also keeping coming back to the query languages of MySQL and MongoDB.
+        I tend to focus on javaScript with regular excursions into React, Node, Express, and the NoSQL and SQL query languages.
       </ParaText>
     </ColContainer2>
   );
