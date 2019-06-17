@@ -12,7 +12,7 @@ function Info() {
       </ParaText>
 
       <ParaText>
-        In my previous life, I studied literature and philosophy and taught writing and research and outdoor classes at various nearby
+        In my previous life, I studied literature and philosophy and taught writing, research, and outdoor classes at various nearby
         colleges and centers.
       </ParaText>
       <ParaText>
