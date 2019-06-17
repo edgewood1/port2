@@ -6,7 +6,8 @@ import { Text, Title, Grid, ColContainer } from "../css/Pages_css";
 
 class Blog extends React.Component {
   state = {
-    hits: []
+    hits: [], 
+    id: ""
   };
 
   componentWillMount() {
@@ -24,6 +25,7 @@ class Blog extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     console.log(id);
+    this.setState({id: id})
     var new_id = id.toString();
     // myStr=myStr.toLowerCase();
     new_id = new_id.replace(/(^\s+|[^a-zA-Z0-9 ]+|\s+$)/g, ""); //this one
@@ -59,7 +61,17 @@ class Blog extends React.Component {
       });
     });
   }
- 
+  link = {
+    'color': 'black',
+    'text-decoration': 'none'
+  }
+   
+  fix(elem){
+    elem = elem["title"].toString().replace(/[0-9 ]/, "");
+    var colon = elem.indexOf(":");
+    var post1 = elem.slice(colon+1);
+    return post1;
+  }
 
   render() {
     if (this.state.hits.length > 0) {
@@ -69,17 +81,20 @@ class Blog extends React.Component {
  
     return (
       <ColContainer>
-        <Title> Blog Categories</Title>
+        <Title> {this.state.id}</Title>
    
-            {this.state.hits.map((elem, i) => (
-              <Link
+            {this.state.hits.map((elem, i) =>  
+              
+             
+              (<Link style={this.link}
                 className="col s6"
                 key={i}
                 to={`/one_post/${elem["ID"]}`}
               >
-                {elem["title"].toString().replace(/[0-9 ]/, "")}
+                {this.fix(elem)}
               </Link>
-            ))}
+            )
+             )}
             </ColContainer>
      
     );

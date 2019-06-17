@@ -8,22 +8,18 @@ function Info() {
       <Title> Background </Title>
 
       <ParaText>
-        In college, I studied literature and philosophy before teaching writing and research classes at various nearby
-        colleges.
+      I tend to focus on javaScript with regular excursions into React, Node, Express, and the NoSQL and SQL query languages.
       </ParaText>
 
       <ParaText>
-        I've also spent a bit of time as an outdoor guide for teens as well as
-        an operations manager at a wildcrafting & outdoor school. These days, I
-        spend my time with my wife, daughter, and dog.
+        In my previous life, I studied literature and philosophy and taught writing and research and outdoor classes at various nearby
+        colleges and centers.
       </ParaText>
       <ParaText>
-        Coding could be seen as a kind of writing, with its own syntax and rhetoric, its own recursive process, its own styles of delivery.
-        I also appreciate the way web development integrates my past interests yet
-        allows for new forms of expression, collaboration, and community.
+        Coding could be seen as a kind of writing, with its own syntax and rhetoric, its own recursive process, its own modes of self-expression, collaboration, and community.
       </ParaText>
       <ParaText>
-        I tend to focus on javaScript with regular excursions into React, Node, Express, and the NoSQL and SQL query languages.
+        These days, I spend my time with my wife, daughter, and dog.
       </ParaText>
     </ColContainer2>
   );
