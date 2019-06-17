@@ -38,12 +38,14 @@ class Blog extends React.Component {
       // this.state.posts.forEach((e, i)=>{console.log(e[i])})
     });
   }
-
+  style = {
+    'padding-top': '15vh'
+  }
   render() {
     var col1 = [];
 
     return (
-      <ColContainer>
+      <ColContainer style={this.style}>
         <Title> Blog Categories </Title>
         <br />
         <Grid>
