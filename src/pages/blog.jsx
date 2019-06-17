@@ -39,7 +39,7 @@ class Blog extends React.Component {
     });
   }
   style = {
-    'padding-top': '15vh'
+    'padding-top': '20vh 0'
   }
   render() {
     var col1 = [];
