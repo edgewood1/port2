@@ -1,4 +1,4 @@
-# port2
+# port2: this was on netifly, but then I stopped deploys
 
 Refactoring of portfolio
 
